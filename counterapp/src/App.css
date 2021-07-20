@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("https://miro.medium.com/max/4096/1*JinuD4VWgK0Iw0hXcALATA.jpeg");
+  background-size: cover;
+}
+
+.App {
+  text-align: center;
+}
+
+.main .inpVal {
+  display: flex;
+}
+
+.count {
+  font-size: 100px;
+  color: white;
+}
+
+.inpVal {
+  width: 400px;
+  margin: 0 auto;
+  font-size: 35px;
+  padding: 20px;
+  text-align: center;
+  background: none;
+  margin-top: 10px;
+  display: block;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(177, 177, 177);
+}
+
+.inpVal:focus {
+  border-color: rgb(179, 187, 20);
+  box-shadow: 0 0 10px 2px rgb(179, 187, 20);
+}
+
+.btn {
+  font-size: 30px;
+  margin: 5px;
+  padding: 20px;
+  background: none;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  border-color: rgb(179, 187, 20);
+  box-shadow: 0 0 10px 2px rgb(179, 187, 20);
+  font-size: 29px;
+}
+
+::placeholder {
+  color: rgb(255, 255, 255);
+}
