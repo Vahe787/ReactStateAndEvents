@@ -67,6 +67,7 @@ class Conteiner extends React.Component {
 
   resetCount = () => {
     this.setState((countReset) => {
+      this.saveCount();
       return {
         count: (countReset.count = this.state.minVal),
       };
