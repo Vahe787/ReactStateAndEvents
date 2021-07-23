@@ -25,7 +25,7 @@ class Login extends React.Component {
     };
   }
 
-  nameValue = (value) => {
+  handleNameValue = (value) => {
     this.setState(() => {
       const [error, name] = nameInpValid(
         value,
@@ -36,7 +36,7 @@ class Login extends React.Component {
     });
   };
 
-  surnameValue = (value) => {
+  handleSurnameValue = (value) => {
     this.setState(() => {
       const [error, surname] = surnameInpValid(
         value,
@@ -47,7 +47,7 @@ class Login extends React.Component {
     });
   };
 
-  emailValue = (value) => {
+  handleEmailValue = (value) => {
     this.setState(() => {
       const [error, email] = emailInpValid(
         value,
@@ -58,7 +58,7 @@ class Login extends React.Component {
     });
   };
 
-  passwordValue = (value) => {
+  handlePasswordValue = (value) => {
     this.setState(() => {
       const [error, password] = passwordInpValid(
         value,
@@ -77,10 +77,10 @@ class Login extends React.Component {
       this.state.password === ""
     ) {
       return (
-        this.nameValue(this.state.name),
-        this.surnameValue(this.state.surname),
-        this.emailValue(this.state.email),
-        this.passwordValue(this.state.password)
+        this.handleNameValue(this.state.name),
+        this.handleSurnameValue(this.state.surname),
+        this.handleEmailValue(this.state.email),
+        this.handlePasswordValue(this.state.password)
       );
     }
 
@@ -100,7 +100,7 @@ class Login extends React.Component {
         <h1 className="login-name">Login</h1>
         <h2 className="label-name">Name</h2>
         <input
-          onChange={(e) => this.nameValue(e.target.value)}
+          onChange={(e) => this.handleNameValue(e.target.value)}
           className="inpValid"
           type="text"
           name="name"
@@ -109,7 +109,7 @@ class Login extends React.Component {
         <h3 className="name-error">{this.state.nameError}</h3>
         <h2 className="label-name">Surname</h2>
         <input
-          onChange={(e) => this.surnameValue(e.target.value)}
+          onChange={(e) => this.handleSurnameValue(e.target.value)}
           className="inpValid"
           type="text"
           name="surname"
@@ -118,7 +118,7 @@ class Login extends React.Component {
         <h3 className="name-error">{this.state.surnameError}</h3>
         <h2 className="label-name">Email</h2>
         <input
-          onChange={(e) => this.emailValue(e.target.value)}
+          onChange={(e) => this.handleEmailValue(e.target.value)}
           className="inpValid"
           type="email"
           name="email"
@@ -127,7 +127,7 @@ class Login extends React.Component {
         <h3 className="name-error">{this.state.emailError}</h3>
         <h2 className="label-name">Password</h2>
         <input
-          onChange={(e) => this.passwordValue(e.target.value)}
+          onChange={(e) => this.handlePasswordValue(e.target.value)}
           className="inpValid"
           type="password"
           name="password"
