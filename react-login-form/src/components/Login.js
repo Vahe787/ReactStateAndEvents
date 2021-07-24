@@ -90,8 +90,8 @@ class Login extends React.Component {
       email: this.state.email,
       password: this.state.password,
     };
-    saveData("data", jsonData);
     JSON.stringify(jsonData);
+    saveData("data", jsonData);
   };
 
   render() {
